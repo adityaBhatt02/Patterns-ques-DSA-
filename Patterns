@@ -1,0 +1,222 @@
+Q1) Easy Pattern
+
+import java.util.Scanner;
+public class EasyPatterns {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+
+        // call which pattern you need to call =>
+
+//        pattern1(n);
+
+//        pattern2(n);
+
+//        pattern3(n);
+
+//        pattern4(n);
+
+    }
+
+
+    static void pattern1(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+
+    static void pattern2(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                    System.out.print("* ");
+                }
+                System.out.println();
+            }
+        }
+
+
+    static void pattern3(int n) {
+        for (int i = 0; i < n; i++) {
+             for (int j = n; j > i; j--) {
+                    System.out.print("* ");
+                }
+                System.out.println();
+            }
+        }
+
+
+    static void pattern4(int n) {
+         for(int i = 1 ; i <= n ; i++) {
+              for(int j = 1 ; j <= i ; j++) {
+                    System.out.print(j + " ");
+                }
+                System.out.println();
+            }
+        }
+    }
+
+
+
+
+
+
+
+Q2) import java.util.Scanner;
+
+public class Pattern1 {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int mid = n;
+
+        for (int i = 1; i <= (2*n - 1); i++) {
+            if(i <= n) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            }else {
+                for (int j = 1; j <= mid - 1; j++) {
+                    System.out.print("* ");
+                }
+                mid--;
+            }
+            System.out.println();
+        }
+}}
+
+
+
+
+
+
+
+Q3)
+import java.util.Scanner;
+public class Pattern2 {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int space = n - 1;
+        for (int i = 0; i < n; i++) {
+                for (int k = 0; k <= space; k++) {
+                    System.out.print(" ");
+                }
+                space--;
+            for (int j = 0; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+            }
+        }
+}
+
+
+
+
+
+
+Q4)
+import java.util.Scanner;
+
+public class
+Pattern3 {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int space = n - 1;
+        int mid = n - 1;
+        for (int i = 1; i <= (2*n - 1); i++) {
+            if(i <= n) {
+            for (int k = 1; k <= space; k++) {
+                System.out.print(" ");
+            }
+            if(i != n) {
+                space--;
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }}
+            else {
+                space++;
+                for (int k = 1; k <= space; k++) {
+                    System.out.print(" ");
+                }
+                for (int j = 1; j <= mid; j++) {
+                    System.out.print("* ");
+                }
+                mid--;
+            }
+            System.out.println();
+        }
+    }}
+
+
+
+
+
+Q5)
+import java.util.Scanner;
+
+public class Pattern4 {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int space = n - 1;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= space ; j++) {
+                System.out.print("  ");
+            }
+            space--;
+
+                for (int k = i; k >= 1 ; k--) {
+                    System.out.print(k + " ");
+                }for (int l = 2; l <= i ; l++) {
+                    System.out.print(l + " ");
+                }
+
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+
+
+
+Q6)
+import java.util.Scanner;
+
+public class Pattern5 {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int space = n - 1;
+        for (int i = 1; i <= 2*n - 1 ; i++) {
+            for (int j = 1; j <= space ; j++) {
+                System.out.print(" ");
+            }
+            if (i <= n) {
+                for (int j = i; j >= 1; j--) {
+                    System.out.print(j + " ");
+                }
+                for (int l = 2; l <= i; l++) {
+                    System.out.print(l + " ");
+                }
+            }else {
+                for (int j = i - 2; j >= 1; j--) {
+                    System.out.print(j + " ");
+                }
+                for (int l = 2; l <= i - 2; l++) {
+                    System.out.print(l + " ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
